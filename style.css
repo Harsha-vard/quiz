@@ -1,0 +1,145 @@
+/* Retro + Material Fusion */
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', monospace;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz-wrapper {
+  width: 90%;
+  max-width: 800px;
+  background: #2d2d2d;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00fff7;
+  animation: popIn 0.7s ease-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.retro-title {
+  font-size: 1.5rem;
+  color: #00fff7;
+  text-shadow: 0 0 6px #00fff7;
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timer {
+  font-size: 1rem;
+  background: #000;
+  padding: 5px 10px;
+  border: 2px solid #00fff7;
+  border-radius: 4px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #333;
+  border: 2px solid #00fff7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #00fff7;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.question-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.options button {
+  background: #1e1e1e;
+  color: #00fff7;
+  border: 2px solid #00fff7;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.2s ease;
+}
+
+.options button:hover {
+  transform: scale(1.05);
+  background: #00fff7;
+  color: #1e1e1e;
+}
+
+.options button.correct {
+  background: #00c853;
+  color: #000;
+}
+
+.options button.wrong {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.material-btn {
+  background: #00fff7;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.material-btn:hover {
+  background: #00d5c4;
+}
+
+.result {
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.badge {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

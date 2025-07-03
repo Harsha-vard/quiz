@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro SOA Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="quiz-wrapper">
+    <header>
+      <h1 class="retro-title">SOA Quiz Challenge</h1>
+      <div class="hud">
+        <div class="timer"><span id="timer">300</span>s</div>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="quiz-box" class="fade-in">
+      <p id="question" class="question-text"></p>
+      <div id="options" class="options"></div>
+      <button id="next-btn" class="material-btn hidden">Next</button>
+    </main>
+
+    <div id="result-screen" class="hidden result">
+      <h2 class="retro-result">Game Over!</h2>
+      <p id="score-text"></p>
+      <p id="feedback-text"></p>
+      <div id="badge" class="badge"></div>
+      <button onclick="location.reload()" class="material-btn">Retry</button>
+    </div>
+  </div>
+
+  <audio id="correct-sound" src="correct.mp3"></audio>
+  <audio id="wrong-sound" src="wrong.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
